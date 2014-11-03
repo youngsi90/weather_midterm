@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/modernizr.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Poiret+One|Fredoka+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+
+    <title>Weather App</title>
+</head>
+<body onload=display_ct();>
+	<div id="wrapper">
+		<!--<img id="loader" src="images/loader.gif"/>-->
+		<p id="temp"></p>
+		<div id="ct"></div>
+	</div>
+	
+	<script>
+		function display_c(){
+		var refresh=1000; // Refresh rate in milli seconds
+		mytime=setTimeout('display_ct()',refresh)
+		}
+
+		function display_ct() {
+		var strcount
+		var x = new Date()
+		document.getElementById('ct').innerHTML = x;
+		tt=display_c();
+		 }
+	</script>
+</body>
+</html>
